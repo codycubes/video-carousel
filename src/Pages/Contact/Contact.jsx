@@ -6,7 +6,15 @@ export const Contact = () => {
   return (
     <>
    
-      <h1 className="pageTitle">Let's Connect</h1>
+      <motion.h1 className="pageTitle"
+   
+        
+      initial={{ opacity: 0, y: 25 }} 
+      whileInView={{ opacity: 1, y: 0 }} 
+      transition={{ duration: 1, delay: 0.8 }} 
+            >
+              
+              Hit Me Up @!</motion.h1>
 
    
       <div className="contact-page">
