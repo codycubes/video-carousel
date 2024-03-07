@@ -1,0 +1,118 @@
+/* Importing variables from a relative path */
+@import "./../../styles/variables.scss";
+
+/* Styles for the contact page container */
+.navbar {
+    /* Navbar styling */
+    background-color: transparent;
+    color: $text;
+    padding:  30px;
+    width: 100%;
+    position: sticky;
+
+    /* Styling for navbar container */
+    .navbar-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      width: 100%;
+      margin: 0 auto;
+    }
+  
+    img {
+        height: 35px; /* Styling for images within navbar */
+    }
+
+    /* Styling for navbar links */
+    .navbar-links {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      font-size: 16px;
+      font-weight: 700;
+
+      /* Styling for individual links within navbar */
+      a {
+        color: $text;
+        text-decoration: none;
+        margin-right: 20px;
+      }
+    }
+
+    /* Styling for hamburger menu */
+    .hamburger-menu {
+      display: none;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      cursor: pointer;
+
+      /* Styling for lines in hamburger menu */
+      .line {
+        width: 25px;
+        height: 3px;
+        background-color: $text;
+        margin: 3px 0;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+      }
+    }
+
+    /* Media query for smaller screens */
+    @media only screen and (max-width: 768px) {
+      .navbar-links {
+        display: none;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: $bg;
+        width: 100%;
+        padding: 20px;
+
+        a {
+          margin: 10px 0;
+        }
+      }
+
+      &.open .navbar-links {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+      }
+
+      .hamburger-menu {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+      }
+    }
+}
+
+/* Styling for hamburger menu lines when opened */
+.line.open:nth-child(1) {
+    opacity: 0;
+}
+
+.line.open:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+/* Styling for hamburger menu lines when opened */
+.line.open:nth-child(3) {
+    transform: rotate(-45deg);
+}
