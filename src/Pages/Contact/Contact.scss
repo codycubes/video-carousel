@@ -78,7 +78,7 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 500;
   letter-spacing: 2px;
   gap: 50px;
@@ -91,6 +91,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+            height: 100px;
 
     &:hover {
       cursor: pointer;
@@ -101,6 +102,8 @@
   // Styles for titles
   .title {
     margin-right: 20px;
+    font-weight: 200;
+    font-size: 14px;
   }
 
   // Styles for phone links
